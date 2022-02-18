@@ -8,7 +8,7 @@ function computerPlay() {
 function game() {
     //Where player will type your choice
     function playerInput() {
-        playerSelection = prompt(`Round ${i}\nRock Paper Scissors!`)
+        playerSelection = prompt(`Round ${i + 1}\nRock Paper Scissors!`)
         if (playerSelection == null) {
             alert("You cannot cancel!")
             return playerInput()
@@ -69,7 +69,13 @@ function game() {
             }
         }
     }
-    // Where function actually starts
+    //Name says all about 
+    function scoreChecker(score1, score2) {
+        if (score1 > score2) return "Player"
+        else if (score2 > score1) return "Computer"
+        else return "Tie"
+    }
+    // Where game() function actually starts
     let playerSelection;
     let playerScore = 0
     let computerScore = 0
@@ -80,7 +86,11 @@ function game() {
         else if (roundResult == false) computerScore++
         else continue
     }
-    return [playerScore, computerScore]
+    return score = {
+        Player: playerScore,
+        Computer: computerScore,
+        Winner: scoreChecker(playerScore, computerScore)
+    }
 }
 
-console.log(game())
+console.table(game())
