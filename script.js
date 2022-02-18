@@ -33,16 +33,16 @@ function game() {
         }
         else if (playerSelection == 'paper') {
             if (computerSelection == 'paper') return null
-            else if (computerSelection == 'scissors') return 'You Lose'
-            else if (computerSelection == 'rock') return 'You win'
+            else if (computerSelection == 'scissors') return false
+            else if (computerSelection == 'rock') return true
         }
         else if (playerSelection == 'scissors') {
-            if (computerSelection == 'paper') return 'You Win'
-            else if (computerSelection == 'scissors') return 'Tie'
-            else if (computerSelection == 'rock') return 'You Lose'
+            if (computerSelection == 'paper') return true
+            else if (computerSelection == 'scissors') return null
+            else if (computerSelection == 'rock') return false
         }
     }
-    
+
     let playerSelection;
     let playerScore = 0
     let computerScore = 0
