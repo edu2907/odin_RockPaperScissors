@@ -8,7 +8,7 @@ function computerPlay() {
 function game() {
     //Where player will type your choice
     function playerInput() {
-        playerSelection = prompt("Rock Paper Scissors!")
+        playerSelection = prompt(`Round ${i}\nRock Paper Scissors!`)
         if (playerSelection == null) {
             alert("You cannot cancel!")
             return playerInput()
@@ -27,22 +27,49 @@ function game() {
     function round(playerSelection, computerSelection) {
 
         if (playerSelection == 'rock') {
-            if (computerSelection == 'paper') return true
-            else if (computerSelection == 'scissors') return false
-            else if (computerSelection == 'rock') return null
+            if (computerSelection == 'scissors') {
+                alert("Rock wins Scissors!")
+                return true
+            }
+            else if (computerSelection == 'paper') {
+                alert("Rock loses to Paper!")
+                return false
+            }
+            else if (computerSelection == 'rock') {
+                alert("Tie!")
+                return null
+            }
         }
         else if (playerSelection == 'paper') {
-            if (computerSelection == 'paper') return null
-            else if (computerSelection == 'scissors') return false
-            else if (computerSelection == 'rock') return true
+            if (computerSelection == 'rock') {
+                alert("Paper wins Rock!")
+                return true
+            }
+            else if (computerSelection == 'scissors') {
+                alert("Papers loses to Scissors!")
+                return false
+            }
+            else if (computerSelection == 'paper') {
+                alert("Tie!")
+                return null
+            }
         }
         else if (playerSelection == 'scissors') {
-            if (computerSelection == 'paper') return true
-            else if (computerSelection == 'scissors') return null
-            else if (computerSelection == 'rock') return false
+            if (computerSelection == 'paper') {
+                alert("Scissors wins Paper!")
+                return true
+            }
+            else if (computerSelection == 'rock') {
+                alert("Scissors loses to Rock!")
+                return false
+            }
+            else if (computerSelection == 'scissors') {
+                alert("Tie!")
+                return null
+            }
         }
     }
-
+    // Where function actually starts
     let playerSelection;
     let playerScore = 0
     let computerScore = 0
