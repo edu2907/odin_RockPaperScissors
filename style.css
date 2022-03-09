@@ -13,4 +13,18 @@ main {
     max-width: 800px;
     margin: auto;
     border-radius: 10px;
+    padding: 30px;
+}
+.column {
+display: flex;
+justify-content: space-between;
+margin: 30px 0px;
+}
+
+.box {
+    background-color: #0B75B3;
+    width: 150px;
+    height: 150px;
+    border: 6px solid #FFFB36;
+    border-radius: 4px;
 }

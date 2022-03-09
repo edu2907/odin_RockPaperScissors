@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,31 @@
     <title>Rock Paper Scissors!</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header><h1>Rock Paper Scissors!</h1></header>
+    <header>
+        <h1>Rock Paper Scissors!</h1>
+    </header>
     <main>
-        <div id="buttons">
-            <button>Rock</button>
-            <button>Paper</button>
-            <button>Scissors</button>
-        </div>
-        <div id="bottomSection">
-            <span id="roundWinner">Choose one of the buttons</span>
-            <div id="match">
-                <span id="score"> <span class="point human">0</span> - <span class="point computer">0</span></span>
-                <span id="winner">Tie</span>
+        <div id="gameInfo">
+            <div class="column players">
+                <div class="box"><img src="imgs/human.png" alt="human player"></div>
+                <div class="empty"></div>
+                <div class="box"><img src="imgs/computer.png" alt="computer player"></div>
+            </div>
+            <div class="column selection">
+                <div class="box"><img src="" alt=""></div>
+                <div><span>Waiting for player...</span></div>
+                <div class="box"><img src="" alt=""></div>
+            </div>
+            <div class="column score">
+                <div class="box"><span>0</span></div>
+                <span>X</span>
+                <div class="box"><span>0</span></div>
             </div>
         </div>
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>
