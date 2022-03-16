@@ -21,20 +21,20 @@
                 <div class="box player"><img src="imgs//playerIcons/computer.png" alt="computer player"></div>
             </div>
             <div class="column selection">
-                <div class="box"><img src="imgs/question-mark.png" alt=""></div>
-                <div class="middle roundWinner"><span>Waiting for player...</span></div>
-                <div class="box"><img src="imgs/question-mark.png" alt=""></div>
+                <div class="box human"><img id="humanChoice" src="imgs/question-mark.png" alt=""></div>
+                <div class="middle roundWinner"><span id="middleText">Waiting for player...</span></div>
+                <div class="box computer"><img id="computerChoice" src="imgs/question-mark.png" alt=""></div>
             </div>
             <div class="column score">
-                <div class="box score"><span class="scorepoints">0</span></div>
+                <div class="box human"><span class="human scorepoints">0</span></div>
                 <div class="middle vs"><span>X</span></div>
-                <div class="box score"><span class="scorepoints">0</span></div>
+                <div class="box computer"><span class="computer scorepoints">0</span></div>
             </div>
         </div>
         <div class="column buttons">
             <div class="box button" id="rock"><img src="imgs/rps/rock.png" id="rock"></div>
             <div class="box button" id="paper"><img src="imgs/rps/paper.png" id="paper"></div>
-            <div class="box button"id="scissors"><img src="imgs/rps/scissors.png" id="scissors"></div>
+            <div class="box button" id="scissors"><img src="imgs/rps/scissors.png" id="scissors"></div>
         </div>
     </main>
     <script src="script.js"></script>
