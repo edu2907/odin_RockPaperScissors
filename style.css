@@ -39,7 +39,7 @@ img {
     border-radius: 40px;
 }
 /*Round*/
-.middle.roundWinner {
+.middle.roundWinner, .middle.endGame {
     font-family: Caveat;
     font-size: 40px;
     padding: 37px;

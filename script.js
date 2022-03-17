@@ -84,4 +84,10 @@ function playRound(element) {
         computerElements.boxes.forEach(box => box.style.backgroundColor = "#689612");
          break;
     };
+    if(playerScore > 4 || computerScore > 4) endGame()
 };
+function endGame() {
+    let topMiddleText = document.querySelector(".middle.endGame")
+    options.forEach(option => document.getElementById(option).removeEventListener('click', playRound));
+    topMiddleText.textContent = `You ${playerScore > computerScore?"Win!":"Lose!"}`
+}
